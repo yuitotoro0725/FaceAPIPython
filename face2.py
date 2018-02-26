@@ -7,7 +7,7 @@ import sys
 headers = {
     # Request headers
     'Content-Type': 'application/octet-stream',
-    'Ocp-Apim-Subscription-Key': '[Input your key]',
+    'Ocp-Apim-Subscription-Key': 'e667e6730e524d789b38294418b73cba',
 }
 
 params = urllib.urlencode({

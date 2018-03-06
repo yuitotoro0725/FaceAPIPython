@@ -1,4 +1,6 @@
 import cognitive_face as CF
+import urllib3
+urllib3.disable_warnings()
 
 KEY = '521a0cdb16ef41cf894b5303fc387dcd'  # Replace with a valid subscription key (keeping the quotes in place).
 CF.Key.set(KEY)

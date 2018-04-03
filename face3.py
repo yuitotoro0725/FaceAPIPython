@@ -13,5 +13,12 @@ CF.BaseUrl.set(BASE_URL)
 
 # You can use this example JPG or replace the URL below with your own URL to a JPEG image.
 img_url = 'https://raw.githubusercontent.com/Microsoft/Cognitive-Face-Windows/master/Data/detection1.jpg'
-faces = CF.face.detect(img_url)
-print(faces)
+results = CF.face.detect(img_url, landmarks=True, attributes='age,gender')
+if len(results)>0:
+  target = results[0]["faceAttributes"]
+  res["gender"] = target["gender"]
+  res["age"] = target["age"]
+  print(res)
+else:
+  print("No Face")
+return res
